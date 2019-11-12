@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CS472 MiniBanking App</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="CSS/index.css">
+</head>
+<body>
+    <div class = "container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-info">
+            <a class="navbar-brand" href="#">CS472 MiniBanking App:::SRM System</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Customers <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">AccountTypes <span class="sr-only">(current)</span></a>
+                </li>
+                
+                </ul>
+                <ul class="navbar-nav mr-auto float-right">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Welcome</a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <button type="button" class="btn btn-primary">Sign Out</button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <h1>Bank Account Form</h1>
+        <form>
+            <div class="form-group">
+                <label for="acc-id">Account No</label>
+                <input name = "accId" class="form-control" type="text" id = "acc-id" placeholder="01-XXX-XXXX" pattern="^01-[0-9]{3}-[0-9]{4}$" title = "Accounr number should follow 01-XXX-XXXX format for any integer X">
+                <small>Your unique account number</small>
+            </div>
+            <div class="form-group">
+                <label for="fullName">Customer Name</label>
+                <input name = "fullName" class="form-control" type="text" id = "fullName" placeholder="e.g. John B.Smith">
+            </div>
+            <div class="form-group">
+                    <label for="accType">Type of Account</label>
+                    <select class="form-control dropdown" name="accType" id="accType">
+                        <option value="Checking">Checking</option>
+                        <option value="saving">Saving</option>
+                        <option value="loan">Loan</option>
+                    </select>
+                </div>
+            <button type="submit" class="btn btn-primary" id = "submit">Create New Account</button>
+        </form>
+        <div id = "list">
+            <ul class="list-group" id = "ulstCustomersId">
+                <li class="list-group-item active">List of Customer Accounts</li>
+            </ul>
+        </div>
+    </div>
+    <!-- link to jQueryCDN -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="crossorigin="anonymous"></script>
+    <!-- link to local javascript file -->
+    <script src="JS/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+[
+    { "customerId": "01-980-0001", 
+    "fullName": "James H. Karvell" ,
+    "accType": "Savings"},
+{ "customerId": "01-980-0002", 
+    "fullName": "Anna Hernandez-Diaz",
+    "accType": "Checking" }
+]
